@@ -7,7 +7,7 @@ import axios from 'axios';
 import { useRouter } from 'next/navigation';
 import { FC, useCallback, useState } from 'react';
 import { toast } from 'react-hot-toast';
-import getReservations from '../actions/getReservation';
+import getReservations from '../../actions/getReservation';
 import ListingCard from '@/components/listings/ListingCard';
 
 interface TripsClientProps {

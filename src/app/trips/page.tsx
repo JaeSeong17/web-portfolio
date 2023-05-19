@@ -1,6 +1,6 @@
 import EmptyState from '@/components/EmptyState';
-import getCurrentUser from '../actions/getCurrentUser';
-import getReservations from '../actions/getReservation';
+import getCurrentUser from '../../actions/getCurrentUser';
+import getReservations from '../../actions/getReservation';
 import TripsClient from './TripsClient';
 
 export default async function TripsPage() {
