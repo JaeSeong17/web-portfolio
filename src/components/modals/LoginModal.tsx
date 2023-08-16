@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, useCallback, useState } from 'react';
+import { useCallback, useState } from 'react';
 import { AiFillGithub } from 'react-icons/ai';
 import { FcGoogle } from 'react-icons/fc';
 import { signIn } from 'next-auth/react';
@@ -12,7 +12,6 @@ import toast from 'react-hot-toast';
 import Button from '../Button';
 import useLoginModal from '@/hooks/useLoginModal';
 import { useRouter } from 'next/navigation';
-import RegisterModal from './RegisterModal';
 import useRegisterModal from '@/hooks/useRegisterModal';
 
 const LoginModal = ({}) => {
@@ -40,14 +39,13 @@ const LoginModal = ({}) => {
       redirect: false,
     }).then((callback) => {
       setIsLoading(false);
-      if (callback?.ok) {
-        toast.success('Logged in');
+      console.log(callback);
+      if (callback?.error) {
+        toast.error('메일과 비밀번호를 확인해주세요.');
+      } else if (callback?.ok) {
+        toast.success('로그인 성공!');
         router.refresh();
         loginModal.onClose();
-      }
-
-      if (callback?.error) {
-        toast.error(callback.error);
       }
     });
   };
@@ -60,14 +58,18 @@ const LoginModal = ({}) => {
   const bodyContent = (
     <div className='flex flex-col gap-4'>
       <Heading
-        title='Space에 다시 오셨군요.'
-        subtitle='Space는 여전히 새로운 공간을 찾고 있습니다.'
+        title='StudyWith에 다시 오셨군요.'
+        subtitle='StudyWith과 함께 다시 달려볼까요?'
       />
       <Input
         id='email'
         label='Email'
         disabled={isLoading}
         register={register}
+        pattern={{
+          value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g,
+          message: '메일 형식 확인',
+        }}
         errors={errors}
         required
       />

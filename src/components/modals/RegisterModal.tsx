@@ -1,7 +1,7 @@
 'use client';
 
-import { FC, useCallback, useState } from 'react';
-import axios from 'axios';
+import { useCallback, useState } from 'react';
+import axios, { AxiosError } from 'axios';
 import { AiFillGithub } from 'react-icons/ai';
 import { FcGoogle } from 'react-icons/fc';
 
@@ -38,11 +38,16 @@ const RegisterModal = ({}) => {
     axios
       .post('/api/register', data)
       .then(() => {
+        toast.success('회원가입 성공!');
         registerModal.onClose();
         loginModal.onOpen();
       })
-      .catch((error) => {
-        toast.error('뭔가 잘못됐어요!');
+      .catch((error: AxiosError) => {
+        if (error.response?.status === 409) {
+          toast.error('중복된 이메일이에요!');
+        } else {
+          toast.error('뭔가 잘못됐어요!');
+        }
       })
       .finally(() => {
         setIsLoading(false);
@@ -57,14 +62,18 @@ const RegisterModal = ({}) => {
   const bodyContent = (
     <div className='flex flex-col gap-4'>
       <Heading
-        title='Space에 오신 것을 환영합니다.'
-        subtitle='Space와 함께 공간을 활용해 보세요.'
+        title='StudyWith에 오신 것을 환영합니다.'
+        subtitle='StudyWith과 함께 열심히 달려보아요.'
       />
       <Input
         id='email'
         label='Email'
         disabled={isLoading}
         register={register}
+        pattern={{
+          value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g,
+          message: '메일 형식 확인',
+        }}
         errors={errors}
         required
       />
@@ -73,6 +82,10 @@ const RegisterModal = ({}) => {
         label='Name'
         disabled={isLoading}
         register={register}
+        pattern={{
+          value: /^[ㄱ-ㅎㅏ-ㅣ가-힣a-zA-Z]{2,10}$/,
+          message: '특수문자 제외 2~10자',
+        }}
         errors={errors}
         required
       />
@@ -82,6 +95,10 @@ const RegisterModal = ({}) => {
         label='Password'
         disabled={isLoading}
         register={register}
+        pattern={{
+          value: /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{4,}$/,
+          message: '영문, 숫자, 특수문자를 포함 4자 이상',
+        }}
         errors={errors}
         required
       />
