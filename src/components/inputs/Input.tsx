@@ -1,8 +1,14 @@
 'use client';
 
 import { FC } from 'react';
-import { FieldErrors, FieldValues, UseFormRegister } from 'react-hook-form';
-import { BiDollar } from 'react-icons/bi';
+import {
+  FieldErrors,
+  FieldValues,
+  UseFormRegister,
+  ValidationRule,
+} from 'react-hook-form';
+import { BiWon } from 'react-icons/bi';
+import { OpenStudyFormData } from '../modals/OpenStudyModal';
 
 interface InputProps {
   id: string;
@@ -11,7 +17,8 @@ interface InputProps {
   disabled?: boolean;
   formatPrice?: boolean;
   required?: boolean;
-  register: UseFormRegister<FieldValues>;
+  pattern?: ValidationRule<RegExp>;
+  register: UseFormRegister<OpenStudyFormData> | UseFormRegister<FieldValues>;
   errors: FieldErrors;
 }
 
@@ -23,23 +30,21 @@ const Input: FC<InputProps> = ({
   formatPrice,
   register,
   required,
+  pattern,
   errors,
 }) => {
   return (
     <div className='w-full relative'>
       {formatPrice && (
-        <BiDollar
-          size={24}
-          className='text-neutral-700 absolute top-5 left-2'
-        />
+        <BiWon size={24} className='text-neutral-700 absolute top-5 left-2' />
       )}
       <input
         id={id}
         disabled={disabled}
-        {...register(id, { required })}
+        {...register(id, { required, pattern })}
         placeholder=''
         type={type}
-        className={`peer w-full p-4 font-light bg-white border-2 rounded-none transition disabled:opacity-70 disabled:cursor-not-allowed 
+        className={`peer w-full pt-6 pb-2 font-light bg-white border-2 rounded-none transition disabled:opacity-70 disabled:cursor-not-allowed 
         ${formatPrice ? 'pl-8' : 'pl-4'}
         ${errors[id] ? 'border-rose-500' : 'border-neutral-300'}
         ${errors[id] ? 'focus:border-rose-500' : 'focus:border-black'}`}
@@ -56,6 +61,7 @@ const Input: FC<InputProps> = ({
         `}
       >
         {label}
+        {errors[id]?.message && ' - ' + errors[id]?.message?.toString()}
       </label>
     </div>
   );
