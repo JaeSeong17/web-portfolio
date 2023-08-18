@@ -2,7 +2,7 @@ import getCurrentUser from './getCurrentUser';
 
 import prisma from '@/libs/prismadb';
 
-export default async function getFavoriteListings() {
+export default async function getFavoriteStudies() {
   try {
     const currentUser = await getCurrentUser();
 
@@ -10,7 +10,7 @@ export default async function getFavoriteListings() {
       return [];
     }
 
-    const favorites = await prisma.listing.findMany({
+    const favorites = await prisma.study.findMany({
       where: {
         id: {
           in: [...(currentUser.favoriteIds || [])],
@@ -18,11 +18,7 @@ export default async function getFavoriteListings() {
       },
     });
 
-    const safeFavorites = favorites.map((favorite) => ({
-      ...favorite,
-      createdAt: favorite.createdAt.toISOString(),
-    }));
-    return safeFavorites;
+    return favorites;
   } catch (error: any) {
     throw new Error(error);
   }
