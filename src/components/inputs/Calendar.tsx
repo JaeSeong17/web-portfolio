@@ -15,7 +15,7 @@ interface CalendarProps {
 const Calendar: FC<CalendarProps> = ({ value, onChange, disabledDates }) => {
   return (
     <DateRange
-      rangeColors={['#262626']}
+      rangeColors={['#b1b1b1']}
       ranges={[value]}
       date={new Date()}
       onChange={onChange}
