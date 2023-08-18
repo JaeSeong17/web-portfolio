@@ -8,8 +8,8 @@ import useRegisterModal from '@/hooks/useRegisterModal';
 import useLoginModal from '@/hooks/useLoginModal';
 import { signOut } from 'next-auth/react';
 import { SafeUser } from '@/types';
-import useRentModal from '@/hooks/useRentModal';
 import { useRouter } from 'next/navigation';
+import useOpenStudyModal from '@/hooks/useOpenStudyModal';
 
 interface UserMenuProps {
   currentUser?: SafeUser | null;
@@ -19,26 +19,29 @@ const UserMenu: FC<UserMenuProps> = ({ currentUser }) => {
   const [isOpen, setIsOpen] = useState(false);
   const registerModal = useRegisterModal();
   const loginModal = useLoginModal();
-  const rentModal = useRentModal();
+  const openStudyModal = useOpenStudyModal();
   const router = useRouter();
 
   const toggleOpen = useCallback(() => {
     setIsOpen((value) => !value);
   }, []);
 
-  const onRent = useCallback(() => {
+  const onOpenStudy = useCallback(() => {
     if (!currentUser) {
       return loginModal.onOpen();
     }
 
-    rentModal.onOpen();
-  }, [currentUser, loginModal, rentModal]);
+    openStudyModal.onOpen();
+  }, [currentUser, loginModal, openStudyModal]);
 
   return (
     <div className='relative'>
       <div className='flex flex-row items-center gap-3'>
-        <div className='hidden md:block text-sm font-semiblod py-3 px-4 rounded-full hover:bg-neutral-100 transition cursor-pointer'>
-          space your home
+        <div
+          onClick={onOpenStudy}
+          className='hidden md:block border-[1px] border-neutral-200 text-sm font-semiblod py-3 px-4 rounded-full hover:bg-neutral-100 hover:shadow-md transition cursor-pointer'
+        >
+          새 스터디 등록
         </div>
         <div
           onClick={toggleOpen}
@@ -61,36 +64,30 @@ const UserMenu: FC<UserMenuProps> = ({ currentUser }) => {
       overflow-hidden
       right-0 top-12 text-sm'
         >
-          <div className='flex flex-col cursor-pointer'>
+          <div className='flex flex-col'>
             {currentUser ? (
               <>
-                <MenuItem
-                  onClick={() => {
-                    router.push('/trips');
-                  }}
-                  label={'내 여행'}
-                />
+                <div className='px-4 py-3 font-semibold'>
+                  {currentUser.name} 님
+                </div>
+                <hr />
                 <MenuItem
                   onClick={() => {
                     router.push('/favorites');
                   }}
-                  label={'좋아요를 누른 Space'}
+                  label={'내가 좋아한 Study'}
                 />
                 <MenuItem
                   onClick={() => {
-                    router.push('/reservations');
+                    router.push('/studyRegistrations');
                   }}
-                  label={'내 Space 예약 정보'}
-                />
-                <MenuItem
-                  onClick={rentModal.onOpen}
-                  label={'내 Space 추가하기'}
+                  label={'내가 신청한 Study'}
                 />
                 <MenuItem
                   onClick={() => {
-                    router.push('/properties');
+                    router.push('/studyOpens');
                   }}
-                  label={'내 Space 정보'}
+                  label={'내가 개설한 Study'}
                 />
                 <hr />
                 <MenuItem onClick={() => signOut()} label={'Logout'} />
