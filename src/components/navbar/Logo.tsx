@@ -15,6 +15,7 @@ const Logo: FC = ({}) => {
       className='hidden md:block cursor-pointer w-auto h-auto'
       height={100}
       width={100}
+      priority
     />
   );
 };

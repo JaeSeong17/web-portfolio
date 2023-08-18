@@ -2,99 +2,52 @@
 
 import { FC } from 'react';
 import Container from '../Container';
-import { TbBeach, TbMountain, TbPool } from 'react-icons/tb';
-import {
-  GiBarn,
-  GiBoatFishing,
-  GiCactus,
-  GiCastle,
-  GiCaveEntrance,
-  GiForestCamp,
-  GiIsland,
-  GiWindmill,
-} from 'react-icons/gi';
-import { MdOutlineVilla } from 'react-icons/md';
-import { FaSkiing } from 'react-icons/fa';
-import { BsSnow } from 'react-icons/bs';
-import { IoDiamond } from 'react-icons/io5';
+import { BsPeople } from 'react-icons/bs';
 import CategoryBox from '../CategoryBox';
 import { usePathname, useSearchParams } from 'next/navigation';
+import { BiCreditCardFront, BiMobileAlt } from 'react-icons/bi';
+import {
+  AiOutlineDatabase,
+  AiOutlineFundProjectionScreen,
+} from 'react-icons/ai';
+import { HiOutlineDesktopComputer } from 'react-icons/hi';
+import { SiThealgorithms } from 'react-icons/si';
 
 export const categories = [
   {
-    label: 'Beach',
-    icon: TbBeach,
-    description: '해변가 근처에 위치한 Space',
+    label: 'FrontEnd',
+    icon: BiCreditCardFront,
+    description: '웹 프론트엔드 개발 스터디',
   },
   {
-    label: 'Windmills',
-    icon: GiWindmill,
-    description: '풍차가 있는 Space',
+    label: 'BackEnd',
+    icon: AiOutlineDatabase,
+    description: '웹 백엔드 개발 스터디',
   },
   {
-    label: 'Modren',
-    icon: MdOutlineVilla,
-    description: '현대식 건축이 아름다운 Space',
+    label: 'App',
+    icon: BiMobileAlt,
+    description: '앱 개발 스터디',
   },
   {
-    label: 'Countryside',
-    icon: TbMountain,
-    description: '시골 풍경과 함께하는 Space',
+    label: 'CS',
+    icon: HiOutlineDesktopComputer,
+    descripton: '컴퓨터 전공 지식 스터디',
   },
   {
-    label: 'Pools',
-    icon: TbPool,
-    description: '수영장이 있는 Space',
+    label: 'Algorithm',
+    icon: SiThealgorithms,
+    descripton: '알고리즘 & 코딩테스트 스터디',
   },
   {
-    label: 'Islands',
-    icon: GiIsland,
-    description: '섬에 있는 Space',
+    label: 'Interview',
+    icon: BsPeople,
+    description: '인성 & 기술 면접 스터디',
   },
   {
-    label: 'Lake',
-    icon: GiBoatFishing,
-    description: '계곡이 보이는 Space',
-  },
-  {
-    label: 'Skiing',
-    icon: FaSkiing,
-    description: '스키장 주변의 Space',
-  },
-  {
-    label: 'Castle',
-    icon: GiCastle,
-    description: '성 분위기가 나는 Space',
-  },
-  {
-    label: 'Camping',
-    icon: GiForestCamp,
-    description: '숲속의 Space',
-  },
-  {
-    label: 'Arctic',
-    icon: BsSnow,
-    description: '항상 눈이 있는 Space',
-  },
-  {
-    label: 'Cave',
-    icon: GiCaveEntrance,
-    description: '동굴 관광과 함께하는 Space',
-  },
-  {
-    label: 'Desert',
-    icon: GiCactus,
-    description: '사막 지역의 Space',
-  },
-  {
-    label: 'Barns',
-    icon: GiBarn,
-    description: '오두막이 있는 Space',
-  },
-  {
-    label: 'Lux',
-    icon: IoDiamond,
-    description: '럭셔리한 Space',
+    label: 'ToyProject',
+    icon: AiOutlineFundProjectionScreen,
+    description: '사이드 프로젝트 팀원 모집',
   },
 ];
 
@@ -112,7 +65,7 @@ const Categories: FC<CategoriesProps> = ({}) => {
 
   return (
     <Container>
-      <div className='pt-4 flex flex-row items-center justify-between overflow-x-auto'>
+      <div className='pt-2 flex flex-row items-center justify-between overflow-x-auto'>
         {categories.map((item) => (
           <CategoryBox
             key={item.label}
