@@ -83,7 +83,7 @@ const RegisterModal = ({}) => {
         disabled={isLoading}
         register={register}
         pattern={{
-          value: /^[ㄱ-ㅎㅏ-ㅣ가-힣a-zA-Z]{2,10}$/,
+          value: /^[ㄱ-ㅎㅏ-ㅣ가-힣a-zA-Z0-9]{2,10}$/,
           message: '특수문자 제외 2~10자',
         }}
         errors={errors}
