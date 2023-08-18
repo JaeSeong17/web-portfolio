@@ -1,11 +1,11 @@
 import EmptyState from '@/components/EmptyState';
 import getCurrentUser from '../../actions/getCurrentUser';
-import getFavoriteListings from '../../actions/getFavoriteListings';
 import FavoritesClient from './FavoritesClient';
+import getFavoriteStudies from '../../actions/getFavoriteStudies';
 
 export default async function FavoirtesPage() {
   const currentUser = await getCurrentUser();
-  const favoriteListings = await getFavoriteListings();
+  const favoriteStudies = await getFavoriteStudies();
 
   if (!currentUser) {
     return (
@@ -16,7 +16,7 @@ export default async function FavoirtesPage() {
     );
   }
 
-  if (favoriteListings.length === 0) {
+  if (favoriteStudies.length === 0) {
     return (
       <EmptyState
         title='좋아요를 누른 Space가 없네요.'
@@ -27,7 +27,7 @@ export default async function FavoirtesPage() {
 
   return (
     <FavoritesClient
-      favoriteListings={favoriteListings}
+      favoriteStudies={favoriteStudies}
       currentUser={currentUser}
     />
   );
