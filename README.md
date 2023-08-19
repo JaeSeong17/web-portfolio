@@ -3,7 +3,6 @@
 ![스크린샷 2023-08-20 062527](https://github.com/JaeSeong17/web-portfolio/assets/37216958/10b03c2f-44a5-4ad4-9e69-2492cc8c57da)
 <br />
 
-<!-- skillset badge -->
 <img src="https://img.shields.io/badge/nextdotjs-000000?style=for-the-badge&logo=nextdotjs&logoColor=white">
 <img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
 <img src="https://img.shields.io/badge/reactquery-FF4154?style=for-the-badge&logo=reactquery&logoColor=white">
@@ -17,7 +16,7 @@
 Airbnb의 UI를 참고했습니다. <br/>
 프로젝트 배포 주소 : <br/>
 
-###### 주요 기능 <br/>
+##### 주요 기능
 
 - 스터디 등록 (스터디 주제, 지역, 날짜, 미팅 횟수 등 설정)
 - 스터디 멤버 관리 (가입 승인, 출결)
