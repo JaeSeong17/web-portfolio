@@ -1,7 +1,6 @@
 # StudyWith.
 
 ![스크린샷 2023-08-20 222003](https://github.com/JaeSeong17/web-portfolio/assets/37216958/57e925a4-35c1-43d3-818b-a0124978b953)
-
 <br />
 <img src="https://img.shields.io/badge/nextdotjs-000000?style=for-the-badge&logo=next.js&logoColor=white">
 <img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
