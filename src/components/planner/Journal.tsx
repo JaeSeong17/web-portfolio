@@ -1,12 +1,7 @@
-import { FC, MouseEvent, useEffect, useRef, useState } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 import { BsJournalText, BsPencilSquare } from 'react-icons/bs';
 import CalendarPlanner from '../inputs/CalendarPlanner';
-import {
-  JournalWithFeedbacks,
-  SafeStudy,
-  SafeUser,
-  StudyRegistrationWithStudy,
-} from '@/types';
+import { SafeStudy, SafeUser, StudyRegistrationWithStudy } from '@/types';
 import { format } from 'date-fns';
 import SelectBar from '../inputs/SelectBar';
 import { useFetchJournal } from '@/hooks/useFetchJournal';
@@ -182,10 +177,7 @@ const Journal: FC<JournalProps> = ({
                 {response?.data?.content
                   ? response.data.content
                       .split('\n')
-                      .map((str: any, idx: any) => {
-                        console.log(str);
-                        return <div key={idx}>{str}</div>;
-                      })
+                      .map((str: any, idx: any) => <div key={idx}>{str}</div>)
                   : '이 날의 내용을 기록해요.'}
               </div>
             </>
@@ -199,10 +191,10 @@ const Journal: FC<JournalProps> = ({
         )}
 
         <div className={response?.data ? 'opacity-100' : 'opacity-50'}>
-          <table className='w-full rounded-lg drop-shadow bg-white overflow-hidden'>
+          <table className='w-full rounded-lg drop-shadow bg-white overflow-hidden table-auto border-1'>
             <thead className='bg-gray-100'>
               <tr>
-                <th className='w-[20%] md:w-[15%]'>Name</th>
+                <th className='font-bold'>Name</th>
                 <th>이 날의 한마디</th>
               </tr>
             </thead>
@@ -240,7 +232,7 @@ const Journal: FC<JournalProps> = ({
                         </td>
                       ) : (
                         <td
-                          className='hover:bg-gray-100 cursor-pointer'
+                          className='hover:bg-gray-100 cursor-pointer text-center'
                           onClick={() => setCommentEdit(true)}
                         >
                           {feedback?.content}
