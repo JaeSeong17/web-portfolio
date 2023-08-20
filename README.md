@@ -1,6 +1,6 @@
 # StudyWith.
 
-![스크린샷 2023-08-20 222003](https://github.com/JaeSeong17/web-portfolio/assets/37216958/57e925a4-35c1-43d3-818b-a0124978b953)
+![스크린샷 2023-08-21 055137](https://github.com/JaeSeong17/web-portfolio/assets/37216958/4adb153f-8bf5-4147-9421-b932cb12ee0f)
 <br />
 <img src="https://img.shields.io/badge/nextdotjs-000000?style=for-the-badge&logo=next.js&logoColor=white">
 <img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
@@ -58,18 +58,18 @@ src
 
 # Page Description
 
-layout 상단부에 navbar가 위치(고정)하고 하단 부에 페이지가 전환 되는 방식
+layout 상단부에 navbar를 고정, 하단 부에 페이지가 전환 되는 방식.
 
-## Main Page - 스터디 목록
+### Main Page (root page) - 스터디 목록
 
 ![스크린샷 2023-08-20 062527](https://github.com/JaeSeong17/web-portfolio/assets/37216958/10b03c2f-44a5-4ad4-9e69-2492cc8c57da)
 
-## Favorites Page - 좋아요 누른 스터디 목록
+상단 바의 검색 결과 목록, 좋아요를 누른 스터디 목록, 내가 개설한 스터디 목록, 내가 신청한 스터디 목록 페이지도 동일한 형식으로 표시됨.
 
-## StudyOpens Page - 내가 개설한 스터디 목록
+### Study Page - 스터디 상세 정보
 
-## StudyRegistrations Page - 내가 신청한 스터디 목록
+![스크린샷 2023-08-21 071730](https://github.com/JaeSeong17/web-portfolio/assets/37216958/c1b59ac8-c3d0-45c1-8e4b-e2ec61f2a85f)
 
-## Study Page - 스터디 상세 정보
+### Planner Page - 스터디 일지
 
-## Planner Page - 스터디 일지
+![스크린샷 2023-08-21 075249](https://github.com/JaeSeong17/web-portfolio/assets/37216958/f3676c46-7ba9-49c6-82ce-dd2b34910980)
