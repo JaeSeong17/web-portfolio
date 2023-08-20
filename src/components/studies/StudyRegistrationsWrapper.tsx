@@ -47,22 +47,18 @@ const StudyRegistrationsWrapper: FC<StudyRegistrationsWrapperProps> = ({
           subtitle='개설된 Study에 멤버로 등록(신청)한 Study 목록입니다.'
         />
         <div className='mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-8'>
-          {myStudyRegistrations.map((reg) => {
-            if (reg.study.leaderId !== currentUser?.id) {
-              return (
-                <StudyCard
-                  key={reg.id}
-                  data={reg.study}
-                  registration={reg}
-                  actionId={reg.id}
-                  onAction={onCancel}
-                  disabled={deletingId === reg.id}
-                  actionLabel={reg.accepted ? '등록 취소' : '신청 취소'}
-                  currentUser={currentUser}
-                />
-              );
-            }
-          })}
+          {myStudyRegistrations.map((reg) => (
+            <StudyCard
+              key={reg.id}
+              data={reg.study}
+              registration={reg}
+              actionId={reg.id}
+              onAction={onCancel}
+              disabled={deletingId === reg.id}
+              actionLabel={reg.accepted ? '등록 취소' : '신청 취소'}
+              currentUser={currentUser}
+            />
+          ))}
         </div>
       </div>
     </Container>

@@ -18,6 +18,8 @@ export default async function StudyRegistrationsPage() {
   const myStudyRegistrations = await getStudyRegistrations({
     currentUserId: currentUser.id,
     includeStudy: true,
+  }).then((regs) => {
+    return regs.filter((reg) => reg.study.leaderId !== currentUser.id);
   });
 
   if (myStudyRegistrations.length === 0) {
