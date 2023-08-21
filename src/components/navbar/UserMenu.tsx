@@ -85,7 +85,7 @@ const UserMenu: FC<UserMenuProps> = ({ currentUser }) => {
                 />
                 <MenuItem
                   onClick={() => {
-                    router.push('/studyOpens');
+                    router.push('/studyOwn');
                   }}
                   label={'내가 개설한 Study'}
                 />

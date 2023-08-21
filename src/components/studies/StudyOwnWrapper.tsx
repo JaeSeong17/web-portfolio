@@ -12,12 +12,12 @@ import { Study } from '@prisma/client';
 import useOpenStudyModal from '@/hooks/useOpenStudyModal';
 import { AiOutlinePlusCircle } from 'react-icons/ai';
 
-interface StudyOwnsWrapperProps {
+interface StudyOwnWrapperProps {
   ownStudies: Study[];
   currentUser?: SafeUser | null;
 }
 
-const StudyOwnsWrapper: FC<StudyOwnsWrapperProps> = ({
+const StudyOwnWrapper: FC<StudyOwnWrapperProps> = ({
   ownStudies,
   currentUser,
 }) => {
@@ -77,4 +77,4 @@ const StudyOwnsWrapper: FC<StudyOwnsWrapperProps> = ({
   );
 };
 
-export default StudyOwnsWrapper;
+export default StudyOwnWrapper;

@@ -1,7 +1,7 @@
 import getCurrentUser from '@/actions/getCurrentUser';
 import getStudies from '@/actions/getStudies';
 import EmptyState from '@/components/EmptyState';
-import StudyOwnsWrapper from '@/components/studies/StudyOwnsWrapper';
+import StudyOwnWrapper from '@/components/studies/StudyOwnWrapper';
 
 export default async function StudyRegistrationsPage() {
   const currentUser = await getCurrentUser();
@@ -26,5 +26,5 @@ export default async function StudyRegistrationsPage() {
     );
   }
 
-  return <StudyOwnsWrapper ownStudies={ownStudies} currentUser={currentUser} />;
+  return <StudyOwnWrapper ownStudies={ownStudies} currentUser={currentUser} />;
 }
