@@ -5,12 +5,12 @@ import { SafeUser } from '@/types';
 import { Study } from '@prisma/client';
 import { FC } from 'react';
 
-interface FavoritesClientProps {
+interface StudyFavoritesWrapperProps {
   favoriteStudies: Study[];
   currentUser?: SafeUser | null;
 }
 
-const FavoritesClient: FC<FavoritesClientProps> = ({
+const StudyFavoritesWrapper: FC<StudyFavoritesWrapperProps> = ({
   favoriteStudies,
   currentUser,
 }) => {
@@ -29,4 +29,4 @@ const FavoritesClient: FC<FavoritesClientProps> = ({
   );
 };
 
-export default FavoritesClient;
+export default StudyFavoritesWrapper;

@@ -1,7 +1,7 @@
 'use client';
 
 import { SafeStudy, SafeUser, StudyRegistrationWithStudy } from '@/types';
-import { FC, useCallback, useEffect, useState } from 'react';
+import { FC, useCallback, useState } from 'react';
 import Image from 'next/image';
 import HeartButton from '../HeartButton';
 import StudyDetail from './StudyDetail';
@@ -12,7 +12,7 @@ import { useRouter } from 'next/navigation';
 import MyInfoCard from './MyInfoCard';
 import { getHistDates } from '@/libs/plannerFunc';
 
-interface StudyClientProps {
+interface StudyWrapperProps {
   study: SafeStudy & {
     leader: SafeUser;
   };
@@ -20,7 +20,7 @@ interface StudyClientProps {
   studyRegistrations?: StudyRegistrationWithStudy[];
 }
 
-const StudyClient: FC<StudyClientProps> = ({
+const StudyWrapper: FC<StudyWrapperProps> = ({
   study,
   currentUser,
   studyRegistrations = [],
@@ -108,4 +108,4 @@ const StudyClient: FC<StudyClientProps> = ({
   );
 };
 
-export default StudyClient;
+export default StudyWrapper;

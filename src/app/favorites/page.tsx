@@ -1,6 +1,6 @@
 import EmptyState from '@/components/EmptyState';
 import getCurrentUser from '../../actions/getCurrentUser';
-import FavoritesClient from './FavoritesClient';
+import StudyFavoritesWrapper from '../../components/studies/StudyFavoritesWrapper';
 import getFavoriteStudies from '../../actions/getFavoriteStudies';
 
 export default async function FavoirtesPage() {
@@ -26,7 +26,7 @@ export default async function FavoirtesPage() {
   }
 
   return (
-    <FavoritesClient
+    <StudyFavoritesWrapper
       favoriteStudies={favoriteStudies}
       currentUser={currentUser}
     />
