@@ -2,7 +2,7 @@
 
 ![스크린샷 2023-08-21 055137](https://github.com/JaeSeong17/web-portfolio/assets/37216958/4adb153f-8bf5-4147-9421-b932cb12ee0f)
 <br />
-<img src="https://img.shields.io/badge/nextdotjs-000000?style=for-the-badge&logo=next.js&logoColor=white">
+<img src="https://img.shields.io/badge/nextdotjs-000000?style=for-the-badge&logo=nextdotjs&logoColor=white">
 <img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
 <img src="https://img.shields.io/badge/reactquery-FF4154?style=for-the-badge&logo=reactquery&logoColor=white">
 <img src="https://img.shields.io/badge/reacthookform-EC5990?style=for-the-badge&logo=reacthookform&logoColor=white">
@@ -15,16 +15,17 @@
 Airbnb의 UI를 참고했습니다. <br/>
 프로젝트 배포 주소 : <br/>
 
-##### 주요 기능
+##### 페이지 구성
 
-- 스터디 검색 (분류, 지역, 진행방식, 인원 수, 좋아요 여부에 따라 목록 표시)
-- 스터디 등록 (스터디 주제, 지역, 날짜, 미팅 횟수, 벌금 설정)
-- 스터디 멤버 관리 (가입 승인, 출결)
-- 스터디 일지 (스터디 내용 기록, 평가, 출석률과 평가 통계)
+| 페이지 | 모달 |
+| ------ | ---- |
+
+| - [Main Page](<#Main-Page-(root)>)
+
+- [Study Page](#study-page)
+- [Planner Page](#planner-page) | |
 
 ---
-
-## Project Specification
 
 ```bash
 src
@@ -56,36 +57,46 @@ src
 └─types             // DB로부터 읽어오는 데이터 타입
 ```
 
+---
+
 ## Page Description
 
 최상위 layout 상단부에 navbar를 고정, 하단 부에 페이지가 전환 되는 방식.
+
+---
 
 ### Navbar - 상단 바
 
 구현 기능
 
-- 메인 페이지 버튼 (좌측 상단 아이콘)
-- 조건 탐색 버튼(검색 적용)
-- 새 스터디 등록 버튼
-- 사용자 메뉴 버튼
+- 메인 페이지 버튼 (좌측 상단 아이콘): 메인 페이지로 이동
+- 조건 탐색 버튼(검색 적용): 조건 지정을 위한 모달 창 열기
+- 새 스터디 등록 버튼: 새 스터디 등록 모달 창 열기
+- 사용자 메뉴 버튼: 사용자 메뉴 토글 기능
+- 카테고리 바: 스터디 카테고리 지정 (root page에서만 표시)
 
-### Main Page (root page) - 스터디 목록
+---
+
+### Main Page (root)
 
 ![스크린샷 2023-08-20 062527](https://github.com/JaeSeong17/web-portfolio/assets/37216958/10b03c2f-44a5-4ad4-9e69-2492cc8c57da)
 
-- 검색 결과 목록, 좋아요를 누른 스터디 목록, 내가 개설한 스터디 목록, 내가 신청한 스터디 목록이 동일한 레이아웃을 사용
+    검색 결과 목록, 좋아요를 누른 스터디 목록, 내가 개설한 스터디 목록, 내가 신청한 스터디 목록이 동일한 레이아웃을 사용
 
 구현 기능
 
-- 현재 개설된 전체 스터디 목록 조회
-- 카테고리 별 목록 조회
-- 좋아요 버튼으로 관심있는 스터디 등록
+- 조회
+  - 전체 스터디 목록
+  - 카테고리 별 목록
+- 좋아요 버튼 (좋아요를 누른 스터디 목록 페이지에서 조회 가능)
 - 개설한 스터디 목록 : 개설한 스터디 삭제
 - 신청한 스터디 목록 : 등록 취소
 
 컴포넌트 구조
 
-### Study Page - 스터디 상세 정보
+---
+
+### Study Page
 
 ![스크린샷 2023-08-21 071730](https://github.com/JaeSeong17/web-portfolio/assets/37216958/c1b59ac8-c3d0-45c1-8e4b-e2ec61f2a85f)
 
@@ -96,7 +107,9 @@ src
 - 스터디 멤버인 경우 현재 스터디 정보 표시(스터디 멤버 정보, 미팅 진행 횟수, 참여율)
 - 스터디 플래너 진입 버튼
 
-### Planner Page - 스터디 플래너(일지)
+---
+
+### Planner Page
 
 ![스크린샷 2023-08-21 075249](https://github.com/JaeSeong17/web-portfolio/assets/37216958/f3676c46-7ba9-49c6-82ce-dd2b34910980)
 
