@@ -17,9 +17,9 @@ Airbnb의 UI를 참고했습니다. <br/>
 
 #### 페이지 구성
 
-| 페이지                                                                                                   | 모달                                                                  |
-| -------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| - [Main Page (root)](#Main-Page) <br/> - [Study Page](#study-page) <br/> - [Planner Page](#planner-page) | - [LoginModal/RegisterModal]() <br/> - [OpenStudyModal/SearchModal]() |
+| 페이지                                                                                                            | 모달                                                                  |
+| ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| - [Main Page (root)](<#main-page-(root)>) <br/> - [Study Page](#study-page) <br/> - [Planner Page](#planner-page) | - [LoginModal/RegisterModal]() <br/> - [OpenStudyModal/SearchModal]() |
 
 ---
 
@@ -73,7 +73,7 @@ src
 
 ---
 
-### Main Page
+### Main Page (root)
 
 ![스크린샷 2023-08-20 062527](https://github.com/JaeSeong17/web-portfolio/assets/37216958/10b03c2f-44a5-4ad4-9e69-2492cc8c57da)
 
