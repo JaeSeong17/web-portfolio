@@ -17,13 +17,9 @@ Airbnb의 UI를 참고했습니다. <br/>
 
 ##### 페이지 구성
 
-| 페이지 | 모달 |
-| ------ | ---- |
-
-| - [Main Page](<#Main-Page-(root)>)
-
-- [Study Page](#study-page)
-- [Planner Page](#planner-page) | |
+| 페이지                                                                                                     | 모달 |
+| ---------------------------------------------------------------------------------------------------------- | ---- |
+| - [Main Page](<#Main-Page-(root)>) <br/> - [Study Page](#study-page) <br/> - [Planner Page](#planner-page) |      |
 
 ---
 
