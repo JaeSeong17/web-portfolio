@@ -7,11 +7,7 @@ import {
   StudyRegistrationWithStudy,
 } from '@/types';
 import { FC } from 'react';
-import { format, isSameDay } from 'date-fns';
-import { BsGraphUp } from 'react-icons/bs';
-import LineChart from '../LineChart';
 import Journal from './Journal';
-import { useFetchJournals } from '@/hooks/useFetchJournals';
 import Statistics from './Statistics';
 
 interface PlannerDetailProps {

@@ -41,39 +41,6 @@ const MyInfoCard: FC<MyInfoCardProps> = ({
   const registerable = memberRegistrations.length < maxPeople;
   const totalAttendRate = getTotalAttendRate(studyRegistrations, histDates);
 
-  const leaderForm = (
-    <>
-      <div className='text-sm'>
-        <div className='font-semibold'>스터디 멤버 정보</div>
-        <ul className='list-disc list-inside'>
-          {memberRegistrations.map((reg) => (
-            <li key={reg.id}>
-              {reg.user.name}
-              {leader.id === reg.user.id && '(리더)'}/{reg.user.email}
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <div className='text-sm'>
-        <div className='font-semibold'>
-          미팅 진행 횟수 : {histDates.length}회
-        </div>
-      </div>
-
-      <div className='text-sm'>
-        <div className='font-semibold'>스터디 참여율 : {totalAttendRate}%</div>
-      </div>
-
-      <hr className='w-full h-[1px] bg-gray-400' />
-      <Button
-        small
-        label='스터디 플래너'
-        onClick={() => router.push(`/planner/${studyId}`)}
-      />
-    </>
-  );
-
   const memberForm = (
     <>
       <>
@@ -142,11 +109,7 @@ const MyInfoCard: FC<MyInfoCardProps> = ({
           <div className='text-sm'>
             스터디 정보를 보기 위해 로그인이 필요합니다.
           </div>
-          <Button
-            label='로그인
-          '
-            onClick={() => loginModal.onOpen()}
-          />
+          <Button label='로그인' onClick={() => loginModal.onOpen()} />
         </>
       )}
     </>
