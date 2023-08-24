@@ -77,7 +77,7 @@ src
 
 #### 컴포넌트 구조
 
-![스크린샷 2023-08-23 172449](https://github.com/JaeSeong17/web-portfolio/assets/37216958/6a6d93b8-55cd-4645-a413-3147e8eeb931)
+![스크린샷 2023-08-23 172449](https://github.com/JaeSeong17/web-portfolio/assets/37216958/6a6d93b8-55cd-4645-a413-3147e8eeb931){: width="70%" height="70%"}
 
 <img src="https://github.com/JaeSeong17/web-portfolio/assets/37216958/6a6d93b8-55cd-4645-a413-3147e8eeb931 width="70%"/>
 
