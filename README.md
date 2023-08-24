@@ -79,7 +79,7 @@ src
 
 ![스크린샷 2023-08-23 172449](https://github.com/JaeSeong17/web-portfolio/assets/37216958/6a6d93b8-55cd-4645-a413-3147e8eeb931)
 
-<img src="https://github.com/JaeSeong17/web-portfolio/assets/37216958/6a6d93b8-55cd-4645-a413-3147e8eeb931.png width="70%"/>
+<img src="https://github.com/JaeSeong17/web-portfolio/assets/37216958/6a6d93b8-55cd-4645-a413-3147e8eeb931 width="70%"/>
 
 ```
 검색 결과 목록, 좋아요를 누른 스터디 목록, 내가 개설한 스터디 목록, 내가 신청한 스터디 목록이 동일한 레이아웃을 사용
