@@ -17,8 +17,8 @@ Airbnb의 UI를 참고했습니다. <br/>
 
 #### 페이지 구성
 
-| [Page Description](#page-description)                                                                         | [Modal Description](#modal-description)                               |
-| ------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| [Page Description](#page-description)                                                                         | [Modal Description](#modal-description)                               | [Api Description](#api-description) |
+| ------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- | ----------------------------------- |
 | - [Main Page (root)](#main-page-root) <br/> - [Study Page](#study-page) <br/> - [Planner Page](#planner-page) | - [LoginModal/RegisterModal]() <br/> - [OpenStudyModal/SearchModal]() |
 
 ---
@@ -92,6 +92,8 @@ src
 - (내가 개설한 스터디 목록 페이지일 경우) : 개설한 스터디 삭제
 - (내가 신청한 스터디 목록 페이지일 경우) : 등록 취소
 
+---
+
 ### Study Page
 
 ![스크린샷 2023-08-21 071730](https://github.com/JaeSeong17/web-portfolio/assets/37216958/c1b59ac8-c3d0-45c1-8e4b-e2ec61f2a85f)
@@ -148,3 +150,7 @@ src
 ---
 
 ## Modal Description
+
+---
+
+## Api Description
