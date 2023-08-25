@@ -17,9 +17,9 @@ Airbnb의 UI를 참고했습니다. <br/>
 
 #### 스펙 시트 목차
 
-| [Page Description](#page-description)                                                                         | [Modal Description](#modal-description)                               | [Api Description](#api-description) |
-| ------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- | ----------------------------------- |
-| - [Main Page (root)](#main-page-root) <br/> - [Study Page](#study-page) <br/> - [Planner Page](#planner-page) | - [LoginModal/RegisterModal]() <br/> - [OpenStudyModal/SearchModal]() |
+| [Page Description](#page-description)                                                                         | [Modal Description](#modal-description)                                                             | [Api Description](#api-description) |
+| ------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------- |
+| - [Main Page (root)](#main-page-root) <br/> - [Study Page](#study-page) <br/> - [Planner Page](#planner-page) | - [Login/RegisterModal](#loginregistermodal) <br/> - [OpenStudy/SearchModal](#openstudysearchmodal) |
 
 ---
 
@@ -77,11 +77,9 @@ src
 
 #### 컴포넌트 구조
 
-![스크린샷 2023-08-23 172449](https://github.com/JaeSeong17/web-portfolio/assets/37216958/6a6d93b8-55cd-4645-a413-3147e8eeb931){: width="30%" height="30%"}
+![스크린샷 2023-08-23 172449](https://github.com/JaeSeong17/web-portfolio/assets/37216958/6a6d93b8-55cd-4645-a413-3147e8eeb931)
 
-```
-검색 결과 목록, 좋아요를 누른 스터디 목록, 내가 개설한 스터디 목록, 내가 신청한 스터디 목록이 동일한 레이아웃을 사용
-```
+> 검색 결과 목록, 좋아요를 누른 스터디 목록, 내가 개설한 스터디 목록, 내가 신청한 스터디 목록이 동일한 레이아웃을 사용
 
 #### 구현 기능
 
@@ -151,10 +149,18 @@ src
 
 ## Modal Description
 
-```wrap
-Modal 컴포넌트는 Head(제목), Body(본문), Footer(버튼부) 3 부분으로 나뉨
-Modal 컴포넌트는 템플릿으로 사용되는 공용 컴포넌트이며 모든 모달(Login, Register, OpenStudy, Search)은 Modal 컴포넌트에 기반
-```
+![스크린샷 2023-08-25 180306](https://github.com/JaeSeong17/web-portfolio/assets/37216958/a0aaf389-a1c3-4e31-b88f-2e79fe4aa4fd){: width="70%" height="70%"}
+
+> Modal 컴포넌트는 Head(제목), Body(본문), Footer(버튼부) 3 부분으로 나뉨
+> Modal 컴포넌트는 템플릿으로 사용되는 공용 컴포넌트이며 모든 모달(Login, Register, OpenStudy, Search)은 Modal 컴포넌트에 기반
+
+### Login/RegisterModal
+
+- 단일 페이지 구성
+
+### OpenStudy/SearchModal
+
+- 다중 페이지 구성
 
 ---
 
