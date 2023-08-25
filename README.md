@@ -151,6 +151,8 @@ src
 
 ![스크린샷 2023-08-25 180306](https://github.com/JaeSeong17/web-portfolio/assets/37216958/a0aaf389-a1c3-4e31-b88f-2e79fe4aa4fd){: width="70%" height="70%"}
 
+<img src="https://github.com/JaeSeong17/web-portfolio/assets/37216958/a0aaf389-a1c3-4e31-b88f-2e79fe4aa4fd" width="70%" height="70%"/>
+
 > Modal 컴포넌트는 Head(제목), Body(본문), Footer(버튼부) 3 부분으로 나뉨
 > Modal 컴포넌트는 템플릿으로 사용되는 공용 컴포넌트이며 모든 모달(Login, Register, OpenStudy, Search)은 Modal 컴포넌트에 기반
 
