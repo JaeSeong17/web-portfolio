@@ -77,7 +77,7 @@ src
 
 #### 컴포넌트 구조
 
-<img src="https://github.com/JaeSeong17/web-portfolio/assets/37216958/6a6d93b8-55cd-4645-a413-3147e8eeb931" width="70%" height="70%"/>
+<img src="https://github.com/JaeSeong17/web-portfolio/assets/37216958/6a6d93b8-55cd-4645-a413-3147e8eeb931" width="50%" height="50%"/>
 
 > 검색 결과 목록, 좋아요를 누른 스터디 목록, 내가 개설한 스터디 목록, 내가 신청한 스터디 목록이 동일한 레이아웃을 사용
 
@@ -98,7 +98,7 @@ src
 
 #### 컴포넌트 구조
 
-<img src="https://github.com/JaeSeong17/web-portfolio/assets/37216958/c870d390-3ad7-4e0d-a866-bba9205d156b" width="70%" height="70%"/>
+<img src="https://github.com/JaeSeong17/web-portfolio/assets/37216958/c870d390-3ad7-4e0d-a866-bba9205d156b" width="50%" height="50%"/>
 
 #### 구현 기능
 
@@ -131,7 +131,7 @@ src
 
 #### 컴포넌트 구조
 
-<img src="https://github.com/JaeSeong17/web-portfolio/assets/37216958/17b02a22-f96f-4871-98c5-bbcf1dcdf773" width="70%" height="70%"/>
+<img src="https://github.com/JaeSeong17/web-portfolio/assets/37216958/17b02a22-f96f-4871-98c5-bbcf1dcdf773" width="50%" height="50%"/>
 
 #### 구현 기능
 
@@ -149,20 +149,61 @@ src
 
 ## Modal Description
 
-> Modal 컴포넌트는 Head(제목), Body(본문), Footer(버튼부) 3 부분으로 나뉨
+> Modal 컴포넌트는 Head(제목), Body(본문), Footer(버튼부) 3 부분으로 나뉨 <br/>
 > Modal 컴포넌트는 템플릿으로 사용되는 공용 컴포넌트이며 모든 모달(Login, Register, OpenStudy, Search)은 Modal 컴포넌트에 기반
 
 ### Login/RegisterModal
 
-<img src="https://github.com/JaeSeong17/web-portfolio/assets/37216958/860e2a6b-a2aa-4caf-91b3-d25cee4224b8" width="70%" height="70%"/>
+<img src="https://github.com/JaeSeong17/web-portfolio/assets/37216958/860e2a6b-a2aa-4caf-91b3-d25cee4224b8" width="50%" height="50%"/>
 
-- 단일 페이지 구성
+> 로그인, 회원가입 모달창은 '단일' 스텝으로 구성되며 서로 전환 가능
 
 ### OpenStudy/SearchModal
 
-<img src="https://github.com/JaeSeong17/web-portfolio/assets/37216958/9d67c544-e84e-4614-ba51-0e3ac6447064" width="70%" height="70%"/>
+<img src="https://github.com/JaeSeong17/web-portfolio/assets/37216958/9d67c544-e84e-4614-ba51-0e3ac6447064" width="50%" height="50%"/>
 
-- 다중 페이지 구성
+> 새 스터디 개설, 스터디 검색 모달창은 '다중' 스텝으로 구성되며 하단 버튼의 이전/다음 버튼으로 페이지 전환 가능
+
+#### OpenStudyModal 스텝 구성
+
+0. 카테고리 설정
+
+   - 스터디 주제 카테고리를 지정 (프론트, 백, 알고리즘, 토이프로젝트 등)
+   - 1개만 선택 가능
+
+1. 스터디 소개
+
+- 스터디 제목, 소제목을 입력
+
+2. 스터디 세부 설명
+
+- 스터디에 대한 소개글을 입력 (200자 제한)
+
+3. 스터디 설정
+
+- 인원 수, 모임 횟수(요일 지정), 운영방식(대면/비대면/유연)
+
+4. 패널티(벌금) 설정
+
+- 지각 / 결석 벌금 설정
+
+5. 지역 설정
+
+- 스터디 운영 지역 설정 (지도 표시)
+
+6. 기간 설정
+
+- 시작날짜와 종료날짜를 설정 (달력 표시)
+
+7. 사진 추가
+
+- 메인 이미지로 표시될 사진 업로드
+
+#### SearchModal 스텝 구성 (검색 조건 설정)
+
+0. 지역 설정
+1. 운영방식 설정 (대면/비대면/유연)
+2. 인원 수 설정
 
 ---
 
