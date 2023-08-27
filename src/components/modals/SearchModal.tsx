@@ -112,6 +112,7 @@ const SearchModal = () => {
     }
   }, [step]);
 
+  // 0: 지역 설정
   let bodyContent = (
     <div className='flex flex-col gap-4'>
       <Heading
@@ -137,6 +138,7 @@ const SearchModal = () => {
     </div>
   );
 
+  // 1: 운영방식 설정
   if (step === STEPS.TYPE) {
     bodyContent = (
       <div className='flex flex-col gap-8'>
@@ -154,6 +156,7 @@ const SearchModal = () => {
     );
   }
 
+  // 2: 인원 수 설정
   if (step === STEPS.MAXPEOPLE) {
     bodyContent = (
       <div className='flex flex-col gap-8'>
