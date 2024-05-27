@@ -19,31 +19,31 @@ const StudiesWrapper: FC<StudiesWrapperProps> = ({
 }) => {
   const [studiesCount, setStudiesCount] = useState(12);
   const scrollPositionRef = useRef(0);
-  useEffect(() => {
-    const updateStudiesCount = () => {
-      const vw = window.innerWidth;
-      if (vw >= 1536) {
-        setStudiesCount(12);
-      } else if (vw >= 1280) {
-        setStudiesCount(10);
-      } else if (vw >= 1024) {
-        setStudiesCount(8);
-      } else if (vw >= 768) {
-        setStudiesCount(6);
-      }
-    };
+  // useEffect(() => {
+  //   const updateStudiesCount = () => {
+  //     const vw = window.innerWidth;
+  //     if (vw >= 1536) {
+  //       setStudiesCount(12);
+  //     } else if (vw >= 1280) {
+  //       setStudiesCount(10);
+  //     } else if (vw >= 1024) {
+  //       setStudiesCount(8);
+  //     } else if (vw >= 768) {
+  //       setStudiesCount(6);
+  //     }
+  //   };
 
-    // 초기 로드 시 listingsCount 설정
-    updateStudiesCount();
+  //   // 초기 로드 시 listingsCount 설정
+  //   updateStudiesCount();
 
-    // 뷰포트 크기 변경 시 listingsCount 업데이트
-    window.addEventListener('resize', updateStudiesCount);
+  //   // 뷰포트 크기 변경 시 listingsCount 업데이트
+  //   window.addEventListener('resize', updateStudiesCount);
 
-    // 컴포넌트 언마운트 시 리스너 제거
-    return () => {
-      window.removeEventListener('resize', updateStudiesCount);
-    };
-  }, []);
+  //   // 컴포넌트 언마운트 시 리스너 제거
+  //   return () => {
+  //     window.removeEventListener('resize', updateStudiesCount);
+  //   };
+  // }, []);
 
   useEffect(() => {
     const handleScroll = () => {
