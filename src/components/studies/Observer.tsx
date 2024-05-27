@@ -22,5 +22,5 @@ export default function Observer({
 
     return () => observer.disconnect();
   }, []);
-  return <div ref={target}>보이면 다음 데이터!</div>;
+  return <div className='w-full h-[10px]' ref={target} />;
 }
