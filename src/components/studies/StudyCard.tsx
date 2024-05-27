@@ -51,7 +51,7 @@ const StudyCard: FC<StudyCardProps> = ({
           <Image
             fill
             alt='StudyRepresent'
-            src={data.imageSrc}
+            src={data.imageSrc || '/images/default_study_img.jpg'}
             className='object-cover h-full w-full group-hover:scale-110 transition'
             sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
             priority

@@ -62,7 +62,7 @@ const StudyWrapper: FC<StudyWrapperProps> = ({
       <div className='flex flex-col gap-6'>
         <div className=' w-full h-[60vh] overflow-hidden rounded-xl relative drop-shadow-md'>
           <Image
-            src={study.imageSrc}
+            src={study.imageSrc || '/images/default_study_img.jpg'}
             alt='Study represent image'
             fill
             className='object-cover w-full'
